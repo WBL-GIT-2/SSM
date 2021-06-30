@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.mapper.BookMapper">
+
+    <!--
+        //添加
+        int addBook(Book book);
+    -->
+    <insert id="addBook" parameterType="com.atguigu.pojo.Book">
+        insert into t_book (name,author,price,sales,stock)
+        values(#{name},#{author},#{price},#{sales},#{stock})
+    </insert>
+
+</mapper>
